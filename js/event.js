@@ -3,6 +3,7 @@
 const ev_date_day = document.getElementById('ev_date_day'); //표시될 날짜
 const ev_date_pr = document.getElementById('prev_date'); //좌측 화살표
 const ev_date_nx = document.getElementById('next_date'); //우측 화살표
+const date_input = document.getElementById('event_date_cal'); // input:date로 입력받은 날짜
 
 // 사용자 시스템 날짜
 const calendar = new Date();
@@ -37,11 +38,21 @@ function date_format(year, month ,day) {
   return `${year}-${df_month}-${df_day}`;
 }
 
+// 날짜 형식 YYYY-MM-DD → 2025년 08월 19일 (나중에 추가된 항목)
+function formatDateToKorean(dateStr) {
+  const date = new Date(dateStr);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}년 ${month}월 ${day}일`;
+}
+
 // 날짜 표시
 function update_date_dp() {
   ev_date_day.innerText = currentYear + '년 ' + currentMonth + '월 ' + currentDay + '일';
+  const today_str = date_format(currentYear, currentMonth, currentDay);
+  date_input.value = today_str; // input에도 반영
 }
-
 
 // 아이콘 클릭시 (날짜 이동)
 function update_date(increment) {
@@ -104,8 +115,42 @@ function sendDate() {
   .then(res => res.text())
   .then(data => {
     document.getElementById('event-result').innerHTML = data; // 서버 응답 출력
+  })
+  .catch(err => {
+    document.getElementById('event-result').innerHTML = `<p>오류: ${err.message}</p>`;
   });
 };
+
+// input[type=date]에서 날짜 선택 시 불러오기
+date_input.addEventListener('change', () => {
+  const select_date = date_input.value; // 2025-08-19
+
+  if(select_date) {
+    // 날짜 상태 업데이트
+    const date = new Date(select_date);
+    currentYear = date.getFullYear();
+    currentMonth = date.getMonth() + 1;
+    currentDay = date.getDate();
+
+    update_date_dp(); // 상단 날짜 표시
+    sendDate(); // AJAX 요청
+  }
+});
+
+// 특정 날짜로 이동하기
+document.getElementById('btn_go_to_date')?.addEventListener('click', (e) => {
+  const targetDate = e.target.dataset.date; // data-date 속성 (2025-08-01)
+
+  if(targetDate) {
+    const date = new Date(targetDate);
+    currentYear = date.getFullYear();
+    currentMonth = date.getMonth() + 1;
+    currentDay = date.getDate();
+
+    update_date_dp(); // 상단 날짜 표시
+    sendDate(); // AJAX 요청
+  }
+})
 
 // 날짜 초기 요청 자동 보내기
 document.addEventListener('DOMContentLoaded', () => {

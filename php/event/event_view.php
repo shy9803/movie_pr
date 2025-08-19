@@ -17,7 +17,13 @@
         <a href="#" title="이전" id="prev_date"><i class="fas fa-chevron-left"></i></a>
         <h2 id="ev_date_day"></h2> <!--2025년 04월 07일-->
         <a href="#" title="다음" id="next_date"><i class="fas fa-chevron-right"></i></a>
+        <p class="event_calendar">
+          <label for="event_date_cal">일자 선택</label>
+          <input type="date" id="event_date_cal">
+          <button type="button" id="btn_go_to_date" data-date="2025-04-05">25/04/05</button>
+        </p>
       </section>
+
       <div id="event">
         <section class="event_top">
           <h2>이벤트</h2>

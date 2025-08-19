@@ -108,7 +108,7 @@ $name   = $_SESSION['mb_name'] ?? '';
               </span>
             </a>
             <!-- 모바일 로그아웃 -->
-            <a href="/롯데시네마/php/login/logout.php" title='로그아웃하기' class='m_logout'>
+            <a href="/movie_pr/php/login/logout.php" title='로그아웃하기' class='m_logout'>
               로그아웃
             </a>
             <?php
@@ -291,11 +291,11 @@ $name   = $_SESSION['mb_name'] ?? '';
         <div class='rank'>
           <img src='./images/main/rank.png' alt='영화순위'>
           <ul>
-            <li><a href="/롯데시네마/php/ranking/rank.php?title=영화순위" title='승부'>1. 승부</a></li>
-            <li><a href="/롯데시네마/php/ranking/rank.php?title=영화순위" title='로비'>2. 로비</a></li>
-            <li><a href="/롯데시네마/php/ranking/rank.php?title=영화순위" title='아마추어'>3. 아마추어</a></li>
-            <li><a href="/롯데시네마/php/ranking/rank.php?title=영화순위" title='야당'>4. 야당</a></li>
-            <li><a href="/롯데시네마/php/ranking/rank.php?title=영화순위" title='미스터 로봇'>5. 미스터 로봇</a></li>
+            <li><a href="/movie_pr/php/ranking/rank.php?title=영화순위" title='승부'>1. 승부</a></li>
+            <li><a href="/movie_pr/php/ranking/rank.php?title=영화순위" title='로비'>2. 로비</a></li>
+            <li><a href="/movie_pr/php/ranking/rank.php?title=영화순위" title='아마추어'>3. 아마추어</a></li>
+            <li><a href="/movie_pr/php/ranking/rank.php?title=영화순위" title='야당'>4. 야당</a></li>
+            <li><a href="/movie_pr/php/ranking/rank.php?title=영화순위" title='미스터 로봇'>5. 미스터 로봇</a></li>
           </ul>
         </div>
 
@@ -438,17 +438,17 @@ $name   = $_SESSION['mb_name'] ?? '';
       <div class="movie_ev">
         <ul class="m_ev_slide">
           <li>
-          <a href="/롯데시네마/php/event/event_view.php" title="영화 이벤트">
+          <a href="/movie_pr/php/event/event_view.php" title="영화 이벤트">
               <img src="./images/event/eventbanner/m_banner1.png" alt="승부 스티커 세트 개봉 3주차 현장 증정 이벤트" class="slide_img">
             </a>
           </li>
           <li>
-            <a href="/롯데시네마/php/event/event_view.php" title="영화 이벤트">
+            <a href="/movie_pr/php/event/event_view.php" title="영화 이벤트">
               <img src="./images/event/eventbanner/m_banner2.png" alt="롯시네 보석발굴 프로젝트 4월 이야기" class="slide_img">
             </a>
           </li>
           <li>
-            <a href="/롯데시네마/php/event/event_view.php" title="영화 이벤트">
+            <a href="/movie_pr/php/event/event_view.php" title="영화 이벤트">
               <img src="./images/event/eventbanner/m_banner3.png" alt="헤레틱 2주차 주말 증정 이벤트" class="slide_img">
             </a>
           </li>
@@ -461,17 +461,17 @@ $name   = $_SESSION['mb_name'] ?? '';
       <div class="bonus_ev">
         <ul class="b_ev_slide">
           <li>
-            <a href="/롯데시네마/php/event/event_view.php" title="혜택 이벤트">
+            <a href="/movie_pr/php/event/event_view.php" title="혜택 이벤트">
               <img src="./images/event/eventbanner/b_banner1.png" alt="롯데멤버스 카드 이벤트" class="slide_img">
             </a>
           </li>
           <li>
-            <a href="/롯데시네마/php/event/event_view.php" title="혜택 이벤트">
+            <a href="/movie_pr/php/event/event_view.php" title="혜택 이벤트">
               <img src="./images/event/eventbanner/b_banner2.png" alt="제휴카드 문화누리카드 혜택" data-desktop="" class="slide_img">
             </a>
           </li>
           <li>
-            <a href="/롯데시네마/php/event/event_view.php" title="혜택 이벤트">
+            <a href="/movie_pr/php/event/event_view.php" title="혜택 이벤트">
               <img src="./images/event/eventbanner/b_banner3.png" alt="통신사 혜택" class="slide_img">
             </a>
           </li>

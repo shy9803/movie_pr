@@ -59,13 +59,13 @@ $title = $_GET['title'] ?? '예매상세';
     <input type="checkbox" id="m_toggle">
   <!-- 모바일 상단 -->
   <div class="mobile_top">
-        <a href="/롯데시네마/index.php" title="뒤로가기">
+        <a href="/movie_pr/index.php" title="뒤로가기">
           <div>
             <img src="../../images/mobile_header/m_back.png" alt="뒤로가기" class="m_top">
           </div>
         </a>
 
-        <a href="/롯데시네마/index.php" title="홈으로가기">
+        <a href="/movie_pr/index.php" title="홈으로가기">
           <div>
             <img src="../../images/mobile_header/m_home.png" alt="메인바로가기" class="m_top">
           </div>
@@ -103,20 +103,20 @@ $title = $_GET['title'] ?? '예매상세';
         <?php
             if(!$userid){
             ?>  
-            <a href="/롯데시네마/php/login/login.php?title=로그인" title="로그인"><img src="../../images/mobile_toggle_menu/m_login.png" alt="로그인"></a>
-            <a href="/롯데시네마/php/login/login.php?title=로그인" title="로그인"><span>로그인하기</span></a>
+            <a href="/movie_pr/php/login/login.php?title=로그인" title="로그인"><img src="../../images/mobile_toggle_menu/m_login.png" alt="로그인"></a>
+            <a href="/movie_pr/php/login/login.php?title=로그인" title="로그인"><span>로그인하기</span></a>
             <?php
             }else{
               ?>
               <!-- 아이디 값이 있을 시  -->
-            <a href="/롯데시네마/php/movie/reservation_check.php?title=예매확인" title="로그인"><img src="../../images/mobile_toggle_menu/m_login.png" alt="로그인"></a>
-            <a href="/롯데시네마/php/movie/reservation_check.php?title=예매확인" title='내정보'>
+            <a href="/movie_pr/php/movie/reservation_check.php?title=예매확인" title="로그인"><img src="../../images/mobile_toggle_menu/m_login.png" alt="로그인"></a>
+            <a href="/movie_pr/php/movie/reservation_check.php?title=예매확인" title='내정보'>
               <span class="welcome" style="color:#fff;">
               <?php echo htmlspecialchars($name).'('.htmlspecialchars($userid).')'; ?>님
               </span>
             </a>
             <!-- 모바일 로그아웃 -->
-            <a href="/롯데시네마/php/login/logout.php" title='로그아웃하기' class='m_logout'>
+            <a href="/movie_pr/php/login/logout.php" title='로그아웃하기' class='m_logout'>
               로그아웃
             </a>
             <?php
@@ -184,10 +184,10 @@ $title = $_GET['title'] ?? '예매상세';
 
         <!-- 멤버십, 고객센터 -->
         <div class='m_nav_member_inquiry'>
-      <a href="/롯데시네마/php/member/membership.php?title=멤버십">
+      <a href="/movie_pr/php/member/membership.php?title=멤버십">
         <i class="fa-solid fa-id-card"></i>
       </a>
-      <a href="/롯데시네마/php/support/inquiry.php?title=고객센터">
+      <a href="/movie_pr/php/support/inquiry.php?title=고객센터">
         <i class="fa-solid fa-headset"></i>
       </a>
     </div>
@@ -219,7 +219,7 @@ $title = $_GET['title'] ?? '예매상세';
       </div>
 
       <h2>
-        <a href="/롯데시네마/index.php" title="롯데시네마 메인페이지">
+        <a href="/movie_pr/index.php" title="롯데시네마 메인페이지">
           <img src="../../images/main/logo.png" alt="롯데시네마 메인페이지">
         </a>
       </h2>
@@ -227,18 +227,18 @@ $title = $_GET['title'] ?? '예매상세';
       <div class='h_right'>
         <?php if (!$userid): ?>
           <!-- 로그인하지 않은 경우 -->
-          <a href="/롯데시네마/php/login/login.php?title=로그인">로그인</a>
-          <a href="/롯데시네마/php/member/membership.php?title=멤버십">멤버십</a>
-          <a href="/롯데시네마/php/support/inquiry.php?title=고객문의">고객문의</a>
+          <a href="/movie_pr/php/login/login.php?title=로그인">로그인</a>
+          <a href="/movie_pr/php/member/membership.php?title=멤버십">멤버십</a>
+          <a href="/movie_pr/php/support/inquiry.php?title=고객문의">고객문의</a>
         <?php else: ?>
           <!-- 로그인한 경우 -->
           <span class="welcome" style="color:#333333;">
-            <a href="/롯데시네마/php/movie/reservation_check.php?title=예매확인" title='내정보'>
+            <a href="/movie_pr/php/movie/reservation_check.php?title=예매확인" title='내정보'>
             <?php echo htmlspecialchars($name).'('.htmlspecialchars($userid).')'; ?>님
             </a>
           </span>
-          <a href="/롯데시네마/php/support/inquiry.php?title=고객문의">고객문의</a>
-          <a href="/롯데시네마/php/login/logout.php">로그아웃</a>
+          <a href="/movie_pr/php/support/inquiry.php?title=고객문의">고객문의</a>
+          <a href="/movie_pr/php/login/logout.php">로그아웃</a>
         <?php endif; ?>
       </div>
 
@@ -253,17 +253,17 @@ $title = $_GET['title'] ?? '예매상세';
               영화
             </a>
             <ul class='sub'>
-              <li><a href="/롯데시네마/php/movie/now_showing.php?title=현재 상영작" title='상영작'>현재 상영작</a></li>
-              <li><a href="/롯데시네마/php/movie/reservation.php?title=예매하기" title='예매하기'>예매하기</a></li>
-              <li><a href="/롯데시네마/php/movie/reservation_check.php?title=예매확인" title='예매확인'>예매확인</a></li>
+              <li><a href="/movie_pr/php/movie/now_showing.php?title=현재 상영작" title='상영작'>현재 상영작</a></li>
+              <li><a href="/movie_pr/php/movie/reservation.php?title=예매하기" title='예매하기'>예매하기</a></li>
+              <li><a href="/movie_pr/php/movie/reservation_check.php?title=예매확인" title='예매확인'>예매확인</a></li>
             </ul>
           </li>
 
           <li>
             <a href="javascript:void(0)" title='영화관'>영화관</a>
             <ul class='sub'>
-              <li><a href="/롯데시네마/php/theater/special.php?title=스페셜관" title='스페셜관'>스페셜관</a></li>
-              <li><a href="/롯데시네마/php/theater/search_by_region.php?title=스페셜관" title='지역검색'>지역검색</a></li>
+              <li><a href="/movie_pr/php/theater/special.php?title=스페셜관" title='스페셜관'>스페셜관</a></li>
+              <li><a href="/movie_pr/php/theater/search_by_region.php?title=스페셜관" title='지역검색'>지역검색</a></li>
             </ul>
           </li>
 
@@ -272,8 +272,8 @@ $title = $_GET['title'] ?? '예매상세';
               이벤트
             </a>
             <ul class='sub'>
-              <li><a href="/롯데시네마/php/event/event_view.php?title=진행중인 이벤트" title='진행중인 이벤트'>진행중인 이벤트</a></li>
-              <li><a href="/롯데시네마/php/event/event_list.php?title=이벤트확인" title='이벤트확인'>이벤트확인</a></li>
+              <li><a href="/movie_pr/php/event/event_view.php?title=진행중인 이벤트" title='진행중인 이벤트'>진행중인 이벤트</a></li>
+              <li><a href="/movie_pr/php/event/event_list.php?title=이벤트확인" title='이벤트확인'>이벤트확인</a></li>
             </ul>
           </li>
 
@@ -282,9 +282,9 @@ $title = $_GET['title'] ?? '예매상세';
               스토어
             </a>
             <ul class='sub'>
-              <li><a href="/롯데시네마/php/store/store.php?title=스토어" title='포토카드'>포토카드</a></li>
-              <li><a href="/롯데시네마/php/store/store.php?title=스토어" title='관람권'>관람권</a></li>
-              <li><a href="/롯데시네마/php/store/store.php?title=스토어" title='스낵,음료'>스낵,음료</a></li>
+              <li><a href="/movie_pr/php/store/store.php?title=스토어" title='포토카드'>포토카드</a></li>
+              <li><a href="/movie_pr/php/store/store.php?title=스토어" title='관람권'>관람권</a></li>
+              <li><a href="/movie_pr/php/store/store.php?title=스토어" title='스낵,음료'>스낵,음료</a></li>
             </ul>
           </li>
         </ul>
@@ -296,11 +296,11 @@ $title = $_GET['title'] ?? '예매상세';
   <div class='rank'>
     <img src='../../images/main/rank.png' alt='영화순위'>
       <ul>
-        <li><a href="/롯데시네마/php/ranking/rank.php?title=영화순위" title='승부'>1. 승부</a></li>
-        <li><a href="/롯데시네마/php/ranking/rank.php?title=영화순위" title='로비'>2. 로비</a></li>
-        <li><a href="/롯데시네마/php/ranking/rank.php?title=영화순위" title='아마추어'>3. 아마추어</a></li>
-        <li><a href="/롯데시네마/php/ranking/rank.php?title=영화순위" title='야당'>4. 야당</a></li>
-        <li><a href="/롯데시네마/php/ranking/rank.php?title=영화순위" title='미스터 로봇'>5. 미스터 로봇</a>
+        <li><a href="/movie_pr/php/ranking/rank.php?title=영화순위" title='승부'>1. 승부</a></li>
+        <li><a href="/movie_pr/php/ranking/rank.php?title=영화순위" title='로비'>2. 로비</a></li>
+        <li><a href="/movie_pr/php/ranking/rank.php?title=영화순위" title='아마추어'>3. 아마추어</a></li>
+        <li><a href="/movie_pr/php/ranking/rank.php?title=영화순위" title='야당'>4. 야당</a></li>
+        <li><a href="/movie_pr/php/ranking/rank.php?title=영화순위" title='미스터 로봇'>5. 미스터 로봇</a>
         </li>
       </ul>
   </div>

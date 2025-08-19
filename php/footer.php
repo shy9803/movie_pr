@@ -10,7 +10,7 @@
     <ul class='f_gnb'>
 
       <li class='f_logo'>
-          <a href="/롯데시네마/index.php" title='하단로고'>
+          <a href="/movie_pr/index.php" title='하단로고'>
             <img src="../../images/main/logo_wht.png" alt="하단로고">
           </a>
       </li>
